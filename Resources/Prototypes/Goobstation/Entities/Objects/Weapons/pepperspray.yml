@@ -1,0 +1,27 @@
+- type: entity
+  name: pepperspray
+  parent: BaseItem
+  id: Pepperspray
+  description: "Subdues unwilling targets, blinding them."
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Janitorial/janitorial.rsi
+    state: cleaner
+  - type: Item
+    sprite: Objects/Specific/Janitorial/janitorial.rsi
+  - type: SolutionContainerManager
+    solutions:
+      spray:
+        maxVol: 50
+  - type: RefillableSolution
+    solution: spray
+  - type: SolutionItemStatus
+    solution: spray
+  - type: UseDelay
+  - type: Spray
+    transferAmount: 10
+    sprayVelocity: 2
+    spraySound:
+      path: /Audio/Effects/spray2.ogg
+  - type: ExaminableSolution
+    solution: spray
